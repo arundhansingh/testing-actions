@@ -9,7 +9,7 @@ jobs:
   my-first-job:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@4
+      - uses: actions/checkout@v4
       - name: checking list of files
         shell: bash
         run: |
