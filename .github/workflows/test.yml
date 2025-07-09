@@ -1,0 +1,24 @@
+name: my-new-workflow
+
+run-name: workflow created by ${{ github.actor }}
+
+on : [push]
+
+jobs:
+
+  my-first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@4
+      - name: checking list of files
+        shell: bash
+        run: |
+          ls -la
+
+      - uses: actions/setup-node@v4
+        with:
+           node-version: '20'
+
+      - run: npm version
+        
+      
